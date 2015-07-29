@@ -1,0 +1,52 @@
+\documentclass[12 pt]{beamer}
+\usetheme[
+	bullet=circle,		% Other option: square
+	bigpagenumber,		% circled page number on lower right
+	topline=true,			% colored bar at the top of the frame 
+	shadow=false,			% Shading for beamer blocks
+	watermark=BG_lower,	% png file for the watermark
+	]{Flip}
+
+
+\newcommand{\titleimage}{title}			% Custom title 
+\newcommand{\tanedo}{tanedolight}		% Custom author name
+
+\usepackage[T1]{fontenc}
+\usepackage[babel]{portuges}
+\usepackage{lmodern}			
+%\usepackage{sfmath}		% Sans Serif Math, off by default
+
+%% Protects fonts from Beamer screwing with them
+%% http://tex.stackexchange.com/questions/10488/force-computer-modern-in-math-mode
+\usefonttheme{professionalfonts}
+
+\usepackage{graphicx}
+\usepackage{multirow}			% For multi row cells in table
+\usepackage{arydshln} 			% For dashed lines in arrays and tables
+\usepackage{tikz}
+% \usepackage{subfig}           % for sub figures
+% \usepackage{young}			% For Young Tableaux
+% \usepackage{xspace}			% For spacing after commands
+% \usepackage{wrapfig}			% for Text wrap around figures
+
+\graphicspath{{../Imagens/}}	% Put all images in this directory. Avoids clutter.
+
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{mindmap,trees}	% For mind map
+
+\newcommand{\comment}[1]{\textcolor{comment}{\footnotesize{#1}\normalsize}} % comment mild
+\newcommand{\Comment}[1]{\textcolor{Comment}{\footnotesize{#1}\normalsize}} % comment bold
+\newcommand{\COMMENT}[1]{\textcolor{COMMENT}{\footnotesize{#1}\normalsize}} % comment crazy bold
+\newcommand{\Alert}[1]{\textcolor{Alert}{#1}} % louder alert
+\newcommand{\ALERT}[1]{\textcolor{ALERT}{#1}} % loudest alert
+
+\author[Rodrigo Gregori\quad {rodrigo.gregori@gmail.com}]{Rodrigo Gregori}
+\title[Programação VI]{Programação VI}
+\institute{Católica de Santa Catarina}
+\date{\today}
+
+\begin{document}
+
+\include{content}
+
+\end{document}
